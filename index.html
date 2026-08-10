@@ -1,0 +1,316 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jampani Prathyusha - Resume</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .resume {
+            width: 850px;
+            max-width: 95%;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #183b56, #247ba0);
+            color: white;
+            padding: 40px 35px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 16px;
+        }
+
+        .contact {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        /* Content */
+        .content {
+            padding: 30px 40px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section h2 {
+            color: #183b56;
+            font-size: 20px;
+            border-bottom: 2px solid #247ba0;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+
+        .section p {
+            font-size: 14px;
+        }
+
+        .education,
+        .project {
+            margin-bottom: 15px;
+        }
+
+        .education h3,
+        .project h3 {
+            color: #222;
+            font-size: 16px;
+        }
+
+        .date {
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #e5f1f7;
+            color: #183b56;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Two columns */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #f5f7f8;
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .resume {
+                width: 100%;
+                margin: 0;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .resume {
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="resume">
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Jampani Prathyusha</h1>
+        <p>Student | Aspiring Software Developer</p>
+
+        <div class="contact">
+            📧 jampaniprathyusha@gmail.com
+            &nbsp; | &nbsp;
+            📱 +91 XXXXX XXXXX
+            &nbsp; | &nbsp;
+            📍 India
+        </div>
+    </header>
+
+    <main class="content">
+
+        <!-- Career Objective -->
+        <section class="section">
+            <h2>Career Objective</h2>
+
+            <p>
+                Motivated and enthusiastic student with an interest in
+                programming, web development, data visualization, and
+                automation. Seeking an opportunity to apply my technical
+                skills, learn new technologies, and contribute effectively
+                to a professional organization.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2>Education</h2>
+
+            <div class="education">
+                <h3>Undergraduate Degree</h3>
+                <p class="date">Sai University</p>
+                <p>
+                    Currently pursuing my degree and developing skills in
+                    programming, web technologies, data analytics, and
+                    automation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="section">
+            <h2>Technical Skills</h2>
+
+            <div class="skills">
+                <span class="skill">C</span>
+                <span class="skill">Python</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">Power BI</span>
+                <span class="skill">n8n</span>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    Created a responsive personal portfolio website using
+                    HTML and CSS to showcase personal information, skills,
+                    education, and projects.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Power BI Data Visualization</h3>
+                <p>
+                    Created interactive dashboards and visual reports using
+                    Power BI to analyze and present data in an easy-to-
+                    understand format.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Automation Workflow using n8n</h3>
+                <p>
+                    Explored workflow automation using n8n to connect
+                    applications and automate repetitive tasks.
+                </p>
+            </div>
+        </section>
+
+        <!-- Strengths and Languages -->
+        <div class="two-column">
+
+            <section class="section">
+                <h2>Strengths</h2>
+
+                <ul>
+                    <li>Quick Learner</li>
+                    <li>Problem Solving</li>
+                    <li>Teamwork</li>
+                    <li>Adaptability</li>
+                    <li>Communication</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Languages</h2>
+
+                <ul>
+                    <li>Telugu</li>
+                    <li>English</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Certifications -->
+        <section class="section">
+            <h2>Certifications</h2>
+
+            <ul>
+                <li>Add your certification here</li>
+                <li>Add your certification here</li>
+            </ul>
+        </section>
+
+        <!-- Declaration -->
+        <section class="section">
+            <h2>Declaration</h2>
+
+            <p>
+                I hereby declare that the information provided above is true
+                and correct to the best of my knowledge.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © 2026 Jampani Prathyusha
+    </footer>
+
+</div>
+
+</body>
+</html>
+```
