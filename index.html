@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,148 +7,102 @@
 
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #eef2f5;
-            color: #333;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            color: #222;
             line-height: 1.6;
         }
 
         .resume {
             width: 850px;
-            max-width: 95%;
             margin: 30px auto;
-            background: #ffffff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+            background: white;
+            padding: 40px 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         }
 
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #183b56, #247ba0);
-            color: white;
-            padding: 40px 35px;
+        header {
             text-align: center;
-        }
-
-        .header h1 {
-            font-size: 38px;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-        }
-
-        .header p {
-            font-size: 16px;
-        }
-
-        .contact {
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        /* Content */
-        .content {
-            padding: 30px 40px;
-        }
-
-        .section {
+            border-bottom: 2px solid #222;
+            padding-bottom: 20px;
             margin-bottom: 25px;
         }
 
-        .section h2 {
-            color: #183b56;
-            font-size: 20px;
-            border-bottom: 2px solid #247ba0;
-            padding-bottom: 6px;
-            margin-bottom: 12px;
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
         }
 
-        .section p {
+        header p {
+            font-size: 15px;
+        }
+
+        .contact {
+            margin-top: 8px;
             font-size: 14px;
         }
 
-        .education,
-        .project {
-            margin-bottom: 15px;
+        section {
+            margin-bottom: 22px;
         }
 
-        .education h3,
-        .project h3 {
-            color: #222;
+        h2 {
+            font-size: 19px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h3 {
             font-size: 16px;
+            margin-top: 12px;
+            margin-bottom: 4px;
         }
 
-        .date {
-            color: #777;
-            font-size: 13px;
-        }
-
-        /* Skills */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill {
-            background: #e5f1f7;
-            color: #183b56;
-            padding: 7px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        /* Two columns */
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 35px;
+        p {
+            font-size: 14px;
         }
 
         ul {
-            padding-left: 20px;
+            margin-left: 22px;
+            font-size: 14px;
         }
 
         li {
+            margin-bottom: 4px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 25px;
             font-size: 14px;
-            margin-bottom: 5px;
         }
 
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 15px;
-            background: #f5f7f8;
-            font-size: 12px;
-            color: #777;
+        .project-tools {
+            font-style: italic;
+            font-size: 13px;
         }
 
-        /* Mobile */
-        @media (max-width: 600px) {
+        .links a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
             .resume {
-                width: 100%;
-                margin: 0;
-            }
-
-            .content {
-                padding: 25px;
-            }
-
-            .header h1 {
-                font-size: 28px;
-            }
-
-            .two-column {
-                grid-template-columns: 1fr;
+                width: 95%;
+                padding: 30px;
             }
         }
 
-        /* Print */
         @media print {
             body {
                 background: white;
@@ -168,149 +121,512 @@
 
 <div class="resume">
 
-    <!-- Header -->
-    <header class="header">
-        <h1>Jampani Prathyusha</h1>
-        <p>Student | Aspiring Software Developer</p>
+    <!-- HEADER -->
+    <header>
+        <h1>JAMPANI PRATHYUSHA</h1>
+
+        <p>
+            B.Tech – Computing and Data Science
+        </p>
+
+        <p>
+            Sai University, Chennai, India
+        </p>
 
         <div class="contact">
-            📧 jampaniprathyusha@gmail.com
-            &nbsp; | &nbsp;
-            📱 +91 XXXXX XXXXX
-            &nbsp; | &nbsp;
-            📍 India
+            Email: your-email@gmail.com |
+            Phone: +91 XXXXX XXXXX
+        </div>
+
+        <div class="contact links">
+            LinkedIn:
+            <a href="#" target="_blank">Your LinkedIn</a>
+            |
+            GitHub:
+            <a href="#" target="_blank">Your GitHub</a>
         </div>
     </header>
 
-    <main class="content">
 
-        <!-- Career Objective -->
-        <section class="section">
-            <h2>Career Objective</h2>
+    <!-- CAREER OBJECTIVE -->
+    <section>
+        <h2>Career Objective</h2>
 
-            <p>
-                Motivated and enthusiastic student with an interest in
-                programming, web development, data visualization, and
-                automation. Seeking an opportunity to apply my technical
-                skills, learn new technologies, and contribute effectively
-                to a professional organization.
-            </p>
-        </section>
+        <p>
+            Motivated B.Tech Computing and Data Science student with hands-on
+            experience in Python, data analysis, Power BI, web development,
+            artificial intelligence and workflow automation. Interested in
+            Data Analytics, Artificial Intelligence, Machine Learning,
+            automation and software development. Looking for opportunities
+            to apply technical and problem-solving skills through internships,
+            projects and real-world applications.
+        </p>
+    </section>
 
-        <!-- Education -->
-        <section class="section">
-            <h2>Education</h2>
 
-            <div class="education">
-                <h3>Undergraduate Degree</h3>
-                <p class="date">Sai University</p>
-                <p>
-                    Currently pursuing my degree and developing skills in
-                    programming, web technologies, data analytics, and
-                    automation.
-                </p>
-            </div>
-        </section>
+    <!-- EDUCATION -->
+    <section>
+        <h2>Education</h2>
 
-        <!-- Technical Skills -->
-        <section class="section">
-            <h2>Technical Skills</h2>
+        <h3>Bachelor of Technology (B.Tech) – Computing and Data Science</h3>
 
-            <div class="skills">
-                <span class="skill">C</span>
-                <span class="skill">Python</span>
-                <span class="skill">HTML</span>
-                <span class="skill">CSS</span>
-                <span class="skill">Power BI</span>
-                <span class="skill">n8n</span>
-            </div>
-        </section>
+        <p>
+            <strong>Sai University, Chennai</strong>
+        </p>
 
-        <!-- Projects -->
-        <section class="section">
-            <h2>Projects</h2>
+        <p>
+            Currently Pursuing – Second Year
+        </p>
 
-            <div class="project">
-                <h3>Personal Portfolio Website</h3>
-                <p>
-                    Created a responsive personal portfolio website using
-                    HTML and CSS to showcase personal information, skills,
-                    education, and projects.
-                </p>
-            </div>
+        <h3>Higher Secondary / Intermediate Education</h3>
 
-            <div class="project">
-                <h3>Power BI Data Visualization</h3>
-                <p>
-                    Created interactive dashboards and visual reports using
-                    Power BI to analyze and present data in an easy-to-
-                    understand format.
-                </p>
+        <p>
+            [College / School Name] | [Year]
+        </p>
+
+        <h3>Secondary School Education</h3>
+
+        <p>
+            [School Name] | [Year]
+        </p>
+    </section>
+
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+
+            <div>
+                <strong>Programming:</strong>
+                Python, SQL
             </div>
 
-            <div class="project">
-                <h3>Automation Workflow using n8n</h3>
-                <p>
-                    Explored workflow automation using n8n to connect
-                    applications and automate repetitive tasks.
-                </p>
+            <div>
+                <strong>Data Analysis:</strong>
+                Pandas, NumPy
             </div>
-        </section>
 
-        <!-- Strengths and Languages -->
-        <div class="two-column">
+            <div>
+                <strong>Visualization:</strong>
+                Power BI, Excel
+            </div>
 
-            <section class="section">
-                <h2>Strengths</h2>
+            <div>
+                <strong>Web Development:</strong>
+                HTML5, CSS3, JavaScript
+            </div>
 
-                <ul>
-                    <li>Quick Learner</li>
-                    <li>Problem Solving</li>
-                    <li>Teamwork</li>
-                    <li>Adaptability</li>
-                    <li>Communication</li>
-                </ul>
-            </section>
+            <div>
+                <strong>AI & Automation:</strong>
+                n8n, AI Workflows, Chatbots
+            </div>
 
-            <section class="section">
-                <h2>Languages</h2>
+            <div>
+                <strong>Database:</strong>
+                MongoDB, MongoDB Atlas
+            </div>
 
-                <ul>
-                    <li>Telugu</li>
-                    <li>English</li>
-                </ul>
-            </section>
+            <div>
+                <strong>Version Control:</strong>
+                Git, GitHub
+            </div>
+
+            <div>
+                <strong>Tools:</strong>
+                VS Code, Jupyter Notebook, Anaconda, Postman
+            </div>
+
+            <div>
+                <strong>Deployment:</strong>
+                Netlify, Vercel, Render
+            </div>
+
+            <div>
+                <strong>Core Skills:</strong>
+                Problem Solving, Data Interpretation
+            </div>
 
         </div>
+    </section>
 
-        <!-- Certifications -->
-        <section class="section">
-            <h2>Certifications</h2>
 
-            <ul>
-                <li>Add your certification here</li>
-                <li>Add your certification here</li>
-            </ul>
-        </section>
+    <!-- PROJECTS -->
+    <section>
+        <h2>Projects</h2>
 
-        <!-- Declaration -->
-        <section class="section">
-            <h2>Declaration</h2>
+        <h3>1. Hotel Booking & Cancellation Analysis Dashboard</h3>
 
-            <p>
-                I hereby declare that the information provided above is true
-                and correct to the best of my knowledge.
-            </p>
-        </section>
+        <p class="project-tools">
+            Tools: Power BI, Power Query, DAX
+        </p>
 
-    </main>
+        <ul>
+            <li>
+                Developed an interactive Power BI dashboard for analyzing
+                hotel booking and cancellation data.
+            </li>
 
-    <footer class="footer">
-        © 2026 Jampani Prathyusha
-    </footer>
+            <li>
+                Performed data cleaning and transformation using Power Query.
+            </li>
+
+            <li>
+                Created KPI measures such as cancellation rate,
+                average ADR, average lead time and average special requests.
+            </li>
+
+            <li>
+                Analyzed distribution channels, market segments,
+                customer types and booking patterns.
+            </li>
+        </ul>
+
+
+        <h3>2. Healthcare / Mental Health Workplace Survey Analysis</h3>
+
+        <p class="project-tools">
+            Tools: Power BI, Data Analysis
+        </p>
+
+        <ul>
+            <li>
+                Worked with a healthcare-related dataset for workplace
+                mental health survey analysis.
+            </li>
+
+            <li>
+                Cleaned and prepared the dataset for visualization.
+            </li>
+
+            <li>
+                Designed analytical dashboards to identify patterns
+                and trends in survey data.
+            </li>
+
+            <li>
+                Used data visualization techniques to communicate
+                insights clearly.
+            </li>
+        </ul>
+
+
+        <h3>3. Educational Website</h3>
+
+        <p class="project-tools">
+            Tools: HTML, CSS, JavaScript, GitHub, Netlify
+        </p>
+
+        <ul>
+            <li>
+                Designed and developed a responsive educational website.
+            </li>
+
+            <li>
+                Used HTML5, CSS3 and JavaScript for website development.
+            </li>
+
+            <li>
+                Applied SEO practices including page titles,
+                meta descriptions, headings and image alt text.
+            </li>
+
+            <li>
+                Worked on mobile responsiveness and website performance.
+            </li>
+
+            <li>
+                Used GitHub and Netlify for version control and deployment.
+            </li>
+        </ul>
+
+
+        <h3>4. AI Telegram Educational Assistant</h3>
+
+        <p class="project-tools">
+            Tools: n8n, AI, Telegram
+        </p>
+
+        <ul>
+            <li>
+                Built an AI-powered educational assistant workflow using n8n.
+            </li>
+
+            <li>
+                Connected Telegram with AI-based automation.
+            </li>
+
+            <li>
+                Designed workflow logic for handling educational queries.
+            </li>
+
+            <li>
+                Explored AI agents, automation workflows and API integrations.
+            </li>
+        </ul>
+
+
+        <h3>5. Website AI Chatbot</h3>
+
+        <p class="project-tools">
+            Tools: n8n, AI, Web Technologies
+        </p>
+
+        <ul>
+            <li>
+                Developed an AI chatbot workflow for website integration.
+            </li>
+
+            <li>
+                Created automated conversational workflows using n8n.
+            </li>
+
+            <li>
+                Explored connecting AI models with web-based chatbot interfaces.
+            </li>
+        </ul>
+
+
+        <h3>6. AI ChatGPT Clone</h3>
+
+        <p class="project-tools">
+            Tools: n8n, AI APIs, Automation
+        </p>
+
+        <ul>
+            <li>
+                Worked on an AI chatbot application inspired by
+                conversational AI systems.
+            </li>
+
+            <li>
+                Created workflow automation for processing user queries
+                and generating responses.
+            </li>
+
+            <li>
+                Gained practical experience with AI model APIs.
+            </li>
+        </ul>
+
+
+        <h3>7. Appointment Booking System</h3>
+
+        <p class="project-tools">
+            Tools: n8n, Automation
+        </p>
+
+        <ul>
+            <li>
+                Created an automated appointment booking workflow.
+            </li>
+
+            <li>
+                Designed workflow steps for handling appointment requests.
+            </li>
+
+            <li>
+                Explored automation of user interactions and backend workflows.
+            </li>
+        </ul>
+
+    </section>
+
+
+    <!-- DATA ANALYTICS -->
+    <section>
+        <h2>Data Analytics Experience</h2>
+
+        <ul>
+            <li>Worked with numerical and categorical datasets.</li>
+            <li>Performed data cleaning and transformation.</li>
+            <li>Used Pandas and NumPy for data processing.</li>
+            <li>Created Power BI dashboards and KPI cards.</li>
+            <li>Worked with Power Query and data merging.</li>
+            <li>Analyzed datasets to identify trends and insights.</li>
+            <li>Created interactive data visualizations.</li>
+        </ul>
+    </section>
+
+
+    <!-- AI AND AUTOMATION -->
+    <section>
+        <h2>AI & Automation</h2>
+
+        <ul>
+            <li>n8n workflow automation</li>
+            <li>AI chatbot development</li>
+            <li>Telegram AI educational assistant</li>
+            <li>Website chatbot workflows</li>
+            <li>AI agent concepts</li>
+            <li>API integration</li>
+            <li>Automated appointment booking</li>
+        </ul>
+    </section>
+
+
+    <!-- COURSES -->
+    <section>
+        <h2>Courses & Learning</h2>
+
+        <h3>MongoDB Skillathon 2026</h3>
+
+        <p>
+            <strong>MongoDB University / ICT Academy</strong>
+        </p>
+
+        <ul>
+            <li>
+                Enrolled in the MongoDB Skillathon 2026 learning program.
+            </li>
+
+            <li>
+                Worked through MongoDB learning courses.
+            </li>
+
+            <li>
+                Developed knowledge of MongoDB and database concepts.
+            </li>
+        </ul>
+
+
+        <h3>MANTRA 2026 Summer School</h3>
+
+        <ul>
+            <li>Frontend Website Development</li>
+            <li>SEO and Responsive Web Design</li>
+            <li>Power BI and Data Visualization</li>
+            <li>n8n and Agentic AI</li>
+            <li>AI Automation</li>
+            <li>GitHub and Website Deployment</li>
+        </ul>
+    </section>
+
+
+    <!-- ACADEMIC WORK -->
+    <section>
+        <h2>Academic & Technical Work</h2>
+
+        <ul>
+            <li>
+                Implemented Bubble Sort and Merge Sort using Python.
+            </li>
+
+            <li>
+                Compared sorting algorithms based on comparisons and swaps.
+            </li>
+
+            <li>
+                Practiced Object-Oriented Programming in Python.
+            </li>
+
+            <li>
+                Worked with Encapsulation, Inheritance, Polymorphism
+                and Abstraction.
+            </li>
+
+            <li>
+                Practiced Python modules and packages.
+            </li>
+
+            <li>
+                Practiced Binary Search Tree and Tree Traversal.
+            </li>
+
+            <li>
+                Practiced Heap Tree, Stack, Queue and Doubly Linked List.
+            </li>
+
+            <li>
+                Practiced Merge Sort and Insertion Sort.
+            </li>
+        </ul>
+    </section>
+
+
+    <!-- SOFT SKILLS -->
+    <section>
+        <h2>Soft Skills</h2>
+
+        <ul>
+            <li>Problem Solving</li>
+            <li>Logical Thinking</li>
+            <li>Team Collaboration</li>
+            <li>Communication</li>
+            <li>Time Management</li>
+            <li>Analytical Thinking</li>
+            <li>Willingness to Learn</li>
+        </ul>
+    </section>
+
+
+    <!-- LANGUAGES -->
+    <section>
+        <h2>Languages</h2>
+
+        <ul>
+            <li>English</li>
+            <li>Telugu</li>
+        </ul>
+    </section>
+
+
+    <!-- AREAS OF INTEREST -->
+    <section>
+        <h2>Areas of Interest</h2>
+
+        <ul>
+            <li>Data Analytics</li>
+            <li>Artificial Intelligence</li>
+            <li>Machine Learning</li>
+            <li>AI Automation</li>
+            <li>Software Development</li>
+            <li>Web Development</li>
+            <li>Data Visualization</li>
+            <li>Business Intelligence</li>
+        </ul>
+    </section>
+
+
+    <!-- LINKS -->
+    <section>
+        <h2>Links</h2>
+
+        <p>
+            <strong>LinkedIn:</strong>
+            <a href="#" target="_blank">Add your LinkedIn URL</a>
+        </p>
+
+        <p>
+            <strong>GitHub:</strong>
+            <a href="#" target="_blank">Add your GitHub URL</a>
+        </p>
+
+        <p>
+            <strong>Portfolio:</strong>
+            <a href="#" target="_blank">Add your Portfolio URL</a>
+        </p>
+    </section>
+
+
+    <!-- DECLARATION -->
+    <section>
+        <h2>Declaration</h2>
+
+        <p>
+            I hereby declare that the information provided above is true
+            and correct to the best of my knowledge.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Jampani Prathyusha</strong>
+        </p>
+    </section>
 
 </div>
 
 </body>
 </html>
-```
