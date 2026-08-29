@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jampani Prathyusha | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f7ff;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: linear-gradient(90deg,
+                    #4f46e5,
+                    #7c3aed,
+                    #db2777);
+
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffe082;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(135deg,
+                    #eef2ff,
+                    #fdf2f8,
+                    #ecfeff);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+
+            background: linear-gradient(90deg,
+                    #4f46e5,
+                    #9333ea,
+                    #db2777);
+
+            -webkit-background-clip: text;
+            color: transparent;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            color: #444;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #555;
+            font-size: 17px;
+        }
+
+
+        /* BUTTONS */
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 24px;
+            margin: 8px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: linear-gradient(90deg,
+                    #4f46e5,
+                    #9333ea);
+
+            color: white;
+        }
+
+        .secondary {
+            border: 2px solid #7c3aed;
+            color: #7c3aed;
+            background: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        }
+
+
+        /* GENERAL SECTION */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+
+            color: #4f46e5;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(79, 70, 229, 0.12);
+
+            border-left: 6px solid #7c3aed;
+        }
+
+
+        /* EDUCATION */
+
+        .education-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .education-card {
+            background: white;
+
+            padding: 25px;
+
+            margin-bottom: 20px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.08);
+
+            border-left: 5px solid #db2777;
+
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateX(8px);
+        }
+
+        .education-card h3 {
+            color: #4f46e5;
+        }
+
+
+        /* SKILLS */
+
+        .skills-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+
+            border-top: 5px solid #4f46e5;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .skill-card h3 {
+            color: #7c3aed;
+            margin-bottom: 8px;
+        }
+
+
+        /* PROJECTS */
+
+        .projects-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+
+            padding: 28px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 5px;
+
+            background: linear-gradient(90deg,
+                    #4f46e5,
+                    #9333ea,
+                    #db2777);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(79, 70, 229, 0.18);
+        }
+
+        .project-card h3 {
+            color: #4f46e5;
+            margin-bottom: 10px;
+        }
+
+        .project-card .tools {
+            color: #db2777;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+
+        /* COURSES */
+
+        .courses {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .course-card {
+            background: linear-gradient(135deg,
+                    #eef2ff,
+                    #fce7f3);
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            border: 1px solid #ddd;
+
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: scale(1.03);
+        }
+
+        .course-card h3 {
+            color: #7c3aed;
+            margin-bottom: 12px;
+        }
+
+
+        /* INTERESTS */
+
+        .interest-list {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 12px;
+        }
+
+        .interest {
+            background: white;
+
+            padding: 10px 18px;
+
+            border-radius: 25px;
+
+            color: #4f46e5;
+
+            font-weight: 600;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* CONTACT */
+
+        .contact-box {
+            max-width: 800px;
+
+            margin: auto;
+
+            text-align: center;
+
+            background: linear-gradient(135deg,
+                    #4f46e5,
+                    #7c3aed,
+                    #db2777);
+
+            color: white;
+
+            padding: 45px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 35px rgba(79, 70, 229, 0.25);
+        }
+
+        .contact-box h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            margin: 8px;
+        }
+
+        .contact-links {
+            margin-top: 25px;
+        }
+
+        .contact-links a {
+            display: inline-block;
+
+            background: white;
+
+            color: #4f46e5;
+
+            padding: 10px 18px;
+
+            margin: 6px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            transform: translateY(-4px);
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+
+            padding: 25px;
+
+            background: #111827;
+
+            color: white;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">
+            Prathyusha
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#courses">Courses</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Jampani Prathyusha
+            </h1>
+
+            <h2>
+                B.Tech – Computing and Data Science
+            </h2>
+
+            <p>
+                Sai University, Chennai, India
+            </p>
+
+            <p style="margin-top:15px;">
+
+                A passionate student interested in
+                Data Analytics, Artificial Intelligence,
+                Machine Learning, Web Development and
+                AI Automation.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn primary">
+                    View My Projects
+                </a>
+
+                <a href="https://www.linkedin.com/in/prathyusha-jampani-aa3a463bb/" target="_blank"
+                    class="btn secondary">
+                    LinkedIn
+                </a>
+
+                <a href="https://github.com/jampaniprathyusha12-creator" target="_blank" class="btn secondary">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>About Me</h2>
+
+            <p>Get to know me</p>
+
+        </div>
+
+
+        <div class="about">
+
+            <p>
+
+                I am a B.Tech Computing and Data Science student
+                at Sai University, Chennai. I enjoy learning
+                and working with technology, especially in
+                Data Analytics, Artificial Intelligence,
+                Machine Learning, Web Development and
+                automation.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                I have worked on projects involving Power BI,
+                Python, web development, AI chatbots and
+                n8n workflow automation. I am continuously
+                improving my technical and problem-solving
+                skills through academic projects and
+                hands-on learning.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <div class="section-title">
+
+            <h2>Education</h2>
+
+            <p>My academic journey</p>
+
+        </div>
+
+
+        <div class="education-container">
+
+            <div class="education-card">
+
+                <h3>
+                    Bachelor of Technology (B.Tech)
+                </h3>
+
+                <p>
+                    <strong>
+                        Computing and Data Science
+                    </strong>
+                </p>
+
+                <p>
+                    Sai University, Chennai
+                </p>
+
+                <p>
+                    Currently Pursuing – Second Year
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    Higher Secondary / Intermediate
+                </h3>
+
+                <p>
+                    Narayana Junior College
+                </p>
+
+                <p>
+                    2023 – 2025
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    Secondary School Education
+                </h3>
+
+                <p>
+                    Nalanda E.M High School
+                </p>
+
+                <p>
+                    Up to 10th
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <div class="section-title">
+
+            <h2>Technical Skills</h2>
+
+            <p>Technologies I work with</p>
+
+        </div>
+
+
+        <div class="skills-container">
+
+
+            <div class="skill-card">
+
+                <h3>Programming</h3>
+
+                <p>
+                    Python<br>
+                    SQL
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Data Analysis</h3>
+
+                <p>
+                    Pandas<br>
+                    NumPy
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Data Visualization</h3>
+
+                <p>
+                    Power BI<br>
+                    Excel
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Web Development</h3>
+
+                <p>
+                    HTML5<br>
+                    CSS3<br>
+                    JavaScript
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>AI & Automation</h3>
+
+                <p>
+                    n8n<br>
+                    AI Workflows<br>
+                    Chatbots
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Database</h3>
+
+                <p>
+                    MongoDB<br>
+                    MongoDB Atlas
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Tools</h3>
+
+                <p>
+                    VS Code<br>
+                    Jupyter Notebook<br>
+                    Postman
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Version Control</h3>
+
+                <p>
+                    Git<br>
+                    GitHub
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="section-title">
+
+            <h2>Projects</h2>
+
+            <p>My academic and technical projects</p>
+
+        </div>
+
+
+        <div class="projects-container">
+
+
+            <div class="project-card">
+
+                <h3>
+                    Hotel Booking & Cancellation Analysis
+                </h3>
+
+                <div class="tools">
+                    Power BI | Power Query | DAX
+                </div>
+
+                <p>
+                    Developed an interactive Power BI dashboard
+                    to analyze hotel bookings, cancellations,
+                    customer types, market segments and
+                    distribution channels.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Healthcare Survey Analysis
+                </h3>
+
+                <div class="tools">
+                    Power BI | Data Analysis
+                </div>
+
+                <p>
+                    Analyzed a healthcare workplace survey
+                    dataset and created visualizations to
+                    identify patterns and trends.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Educational Website
+                </h3>
+
+                <div class="tools">
+                    HTML | CSS | JavaScript | GitHub | Netlify
+                </div>
+
+                <p>
+                    Designed a responsive educational website
+                    with SEO optimization, mobile responsiveness
+                    and interactive features.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    AI Telegram Educational Assistant
+                </h3>
+
+                <div class="tools">
+                    n8n | AI | Telegram
+                </div>
+
+                <p>
+                    Created an AI-powered educational assistant
+                    using n8n automation and Telegram integration.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Website AI Chatbot
+                </h3>
+
+                <div class="tools">
+                    n8n | AI | Web Technologies
+                </div>
+
+                <p>
+                    Developed an AI chatbot workflow designed
+                    for website integration and automated
+                    conversational interactions.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    AI ChatGPT Clone
+                </h3>
+
+                <div class="tools">
+                    n8n | AI APIs | Automation
+                </div>
+
+                <p>
+                    Worked on a conversational AI application
+                    using AI APIs and automated workflows.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Appointment Booking System
+                </h3>
+
+                <div class="tools">
+                    n8n | Workflow Automation
+                </div>
+
+                <p>
+                    Created an automated appointment booking
+                    workflow for handling appointment-related
+                    user interactions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- COURSES -->
+
+    <section id="courses">
+
+        <div class="section-title">
+
+            <h2>Courses & Learning</h2>
+
+            <p>Continuous learning and development</p>
+
+        </div>
+
+
+        <div class="courses">
+
+
+            <div class="course-card">
+
+                <h3>
+                    MongoDB Skillathon 2026
+                </h3>
+
+                <p>
+                    MongoDB University / ICT Academy
+                </p>
+
+                <br>
+
+                <p>
+                    Learning MongoDB database concepts
+                    through the MongoDB Skillathon program.
+                </p>
+
+            </div>
+
+
+            <div class="course-card">
+
+                <h3>
+                    MANTRA 2026 Summer School
+                </h3>
+
+                <p>
+                    Worked on practical assignments involving:
+                </p>
+
+                <br>
+
+                <p>
+                    Frontend Development,
+                    SEO,
+                    Power BI,
+                    Data Visualization,
+                    n8n and Agentic AI.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- AREAS OF INTEREST -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>Areas of Interest</h2>
+
+            <p>Technologies and fields I am interested in</p>
+
+        </div>
+
+
+        <div class="interest-list">
+
+            <span class="interest">
+                Data Analytics
+            </span>
+
+            <span class="interest">
+                Artificial Intelligence
+            </span>
+
+            <span class="interest">
+                Machine Learning
+            </span>
+
+            <span class="interest">
+                AI Automation
+            </span>
+
+            <span class="interest">
+                Software Development
+            </span>
+
+            <span class="interest">
+                Web Development
+            </span>
+
+            <span class="interest">
+                Data Visualization
+            </span>
+
+            <span class="interest">
+                Business Intelligence
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="contact-box">
+
+            <h2>
+                Let's Connect
+            </h2>
